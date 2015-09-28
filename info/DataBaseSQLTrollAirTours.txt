@@ -1,0 +1,114 @@
+CREATE TABLE Booking
+(
+  BookingID INTEGER,
+  CustomerID INTEGER,
+  CONSTRAINT PK_Booking PRIMARY KEY (BookingID),
+);
+
+CREATE TABLE Customer
+(
+  CustomerID INTEGER,
+  CONSTRAINT PK_Customer PRIMARY KEY (CustomerID)
+);
+
+CREATE TABLE SeatReservation
+(
+  SeatNumber VARCHAR(10),
+  CustomerID INTEGER,
+  BookingID INTEGER,
+  RegID VARCHAR(10),
+  FlightID VARCHAR(10),
+  CONSTRAINT PK_SeatReservation PRIMARY KEY (SeatNumber),
+);
+
+CREATE TABLE Flight
+(
+  FlightID VARCHAR(10),
+  RegID VARCHAR(10),
+  CONSTRAINT PK_Flight PRIMARY KEY (FlightID)
+);
+
+CREATE TABLE Aircraft
+(
+  RegID VARCHAR(10),
+  CONSTRAINT PK_Aircraft PRIMARY KEY (RegID)
+);
+
+CREATE TABLE Destination
+(
+  DestinationName VARCHAR(50),
+  CONSTRAINT PK_Destination PRIMARY KEY (DestinationName)
+);
+
+CREATE TABLE Employee
+(
+  EmployeeID INTEGER, 
+  CONSTRAINT PK_Employee PRIMARY KEY (EmployeeID)
+);
+
+CREATE TABLE Product
+(
+  ProductID INTEGER, 
+  CONSTRAINT PK_Product PRIMARY KEY (ProductID)
+);
+
+CREATE TABLE FlightCrew
+(
+  FlightID VARCHAR(10),
+  EmployeeID INTEGER,
+  CONSTRAINT PK_FlightCrew PRIMARY KEY (FlightID, EmployeeID),
+  CONSTRAINT FK_FlightCrewFlight FOREIGN KEY (FlightID)
+	REFERENCES Flight,
+  CONSTRAINT FK_FlightCrewEmployee FOREIGN KEY (EmployeeID)
+    REFERENCES Employee
+);
+
+CREATE TABLE FlightDestination
+(
+  FlightID VARCHAR(10),
+  DestinationName VARCHAR(50),
+  CONSTRAINT PK_FlightDestination PRIMARY KEY (FlightID, DestinationName),
+  CONSTRAINT FK_FlightDestinationFlight FOREIGN KEY (FlightID)
+	REFERENCES Flight,
+  CONSTRAINT FK_FlightDestinationDestination FOREIGN KEY (DestinationName)
+    REFERENCES Destination
+);
+
+CREATE TABLE SeatReservation_Product
+(
+  SeatNumber VARCHAR(10),
+  ProductID INTEGER,
+  CONSTRAINT PK_SeatReservation_Product PRIMARY KEY (SeatNumber, ProductID),
+  CONSTRAINT FK_SeatReservation_ProductSeatReservation FOREIGN KEY (SeatNumber)
+	REFERENCES SeatReservation,
+  CONSTRAINT FK_SeatReservation_ProductProduct FOREIGN KEY (ProductID)
+    REFERENCES Product
+);
+
+ALTER TABLE Booking
+ADD CONSTRAINT FK_BookingCustomer 
+FOREIGN KEY (CustomerID)
+	REFERENCES Customer
+
+ALTER TABLE SeatReservation
+
+ADD CONSTRAINT FK_SeatReservationCustomer
+FOREIGN KEY (CustomerID)
+	REFERENCES Customer,
+
+CONSTRAINT FK_SeatReservationBooking
+FOREIGN KEY (BookingID)
+	REFERENCES Booking,
+
+CONSTRAINT FK_SeatReservationAircraft
+FOREIGN KEY (RegID)
+	REFERENCES Aircraft,
+	
+CONSTRAINT FK_SeatReservationFlight
+FOREIGN KEY (FlightID)
+	REFERENCES Flight;
+
+ALTER TABLE Flight
+ADD CONSTRAINT FK_FlightAircraft
+FOREIGN KEY (RegID)
+	REFERENCES Aircraft
