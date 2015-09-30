@@ -8,7 +8,7 @@
         <meta name="keywords" content="Troll,Air,Tours,Guide,aircraft,seaplane">
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <link rel="shortcut icon" href="image/favicon.ico">
-         
+         <script src="mobilenavigation.js"></script>
         
     </head>
     <body>
@@ -21,13 +21,27 @@
                 </div>
                 
                 <div id="right-top">
-                    <h1>Knapp</h1>
+                    <div id="navbutton">
+                        <span id="opennav">
+                            <a href="#navigation" onclick="toggle_visibilitydual('opennav','closenav');">
+                                <img src="image/menu.png" alt="menu button, opens navigation side bar">
+                            </a>
+                        </span>
+                        
+                    </div>
                 </div>
             </header>
             
             <main>
                 
                 <div id="main-top">
+                    
+                    <div id="main-top-overlay">
+                        <!-- Here will a overlay be added -->
+                        
+                        
+                    </div>
+                
                     
                 </div>
                 
@@ -64,7 +78,22 @@
             
             
             
-            
+            <div id="navigation">
+            <div id="topnav">
+                <span id="closenav">
+                               <a href="#" onclick="toggle_visibilitydual('closenav','opennav');">
+                                    <img src="image/menuclose.png" alt="menu button, closes navigation side bar">
+                               </a>
+                        </span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="generic.html">Generic</a></li>
+                    <li><a href="about.html"> About Us</a></li>
+                </ul>
+            </nav>    
+        </div>
             
             
         </div>
