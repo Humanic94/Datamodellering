@@ -78,16 +78,50 @@ main
 #main-top
 {
    background-color: black;
-   height: 81%;
+   height: 90.6%;
    width: 100%;
    position: absolute;
-   background-image: url("geiranger3.png");
+   background-image: url("geiranger5.png");
    background-repeat: no-repeat;
+   background-size: cover;
+}
+
+#main-top-booking
+{
+   background-color: black;
+   height: 90.6%;
+   width: 100%;
+   position: absolute;
+   background-image: url("geiranger5.png");
+   background-repeat: space;
    background-size: cover;
    
 }
 
-#main-top img
+#main-top-overlay
+ {
+  position: absolute;
+  top: 100px;
+  left: 33%;
+  width: 30%;
+  height: 50%;
+  z-index: 10;
+  border-radius: 0.5em;
+  background-color: rgba(255, 255, 255, 0.68); /*dim the background*/
+ }
+ 
+ #main-top-overlay-booking
+ {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.68); /*dim the background*/
+ }
+
+#main-top-booking img
 {
   
 }
@@ -132,18 +166,18 @@ main
     background-color: black;
 }
 
-#navigation {
-position: fixed;
-right:0;
-top:0;
-
-background-color: #1A1A1A;
-width: 0;
-color: white;
-height: 100%;
-
--webkit-transition: width 1s, height 0s; /* Safari */
-transition: width 0.2s, height 0s;
+#navigation 
+{
+    position: fixed;
+    right:0;
+    top:0;
+    background-color: #1A1A1A;
+    width: 0;
+    color: white;
+    height: 100%;
+    z-index: 3;
+    -webkit-transition: width 1s, height 0s; /* Safari */
+    transition: width 0.2s, height 0s;
 
 }
 
@@ -169,6 +203,11 @@ transition: width 0.2s, height 0s;
      overflow:hidden;
      text-align: center;
 
+ }
+ 
+ #navigation li:hover
+ {
+     color: greenyellow;
  }
 
  #navigation li a
@@ -241,3 +280,6 @@ transition: width 0.2s, height 0s;
      margin:0;
      padding:0;
  }
+ 
+ 
+ 
