@@ -62,6 +62,14 @@ header
     
 }
 
+#left-top img
+{
+    margin-top: 0.5em;
+    width: 25%;
+    height: 100%;
+
+}
+
 
 #right-top
 {
@@ -102,13 +110,42 @@ main
  {
   position: absolute;
   top: 100px;
-  left: 33%;
+  left: 34.3%;
   width: 30%;
   height: 50%;
   z-index: 10;
   border-radius: 0.5em;
   background-color: rgba(255, 255, 255, 0.68); /*dim the background*/
  }
+ 
+  #main-top-overlay h2
+ {
+     text-decoration: underline;
+     text-align: center;
+  
+ }
+ 
+ #main-top-overlay p
+ {
+     margin-top: 2em;
+     margin-left: 3em;
+     margin-right: 3em;
+     text-align: center;
+ }
+ 
+ #main-top-overlay a
+ {
+     color: steelblue;
+     margin-left: 13.5em;
+     text-decoration: underline;
+ }
+ 
+ #main-top-overlay a:hover
+ {
+     color: darkblue;
+ }
+
+ 
  
  #main-top-overlay-booking
  {
@@ -118,7 +155,7 @@ main
   width: 100%;
   height: 100%;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.68); /*dim the background*/
+  background-color: rgba(255, 255, 255, 0.64); /*dim the background*/
  }
 
 #main-top-booking img
@@ -280,6 +317,53 @@ main
      margin:0;
      padding:0;
  }
+ 
+#countryCode
+ {
+     width: 8.1em;
+     height: 1.6em;
+ }
+ 
+ #countryCode optgroup option
+ {
+     width: 8.1em;
+     height: 1.6em;
+     color: black;
+     float: right;
+ }
+ 
+ #form-left-column
+ {
+     padding: 0;
+     margin-left: 30%;
+     margin-bottom: 10%;
+     float: left;
+ }
+ 
+ #form-left-column input
+ {
+     border-radius: 0.1em;
+     margin-top: 9em;
+      
+ }
+ 
+ #form-right-column
+ {
+     padding: 0;
+     margin-right: 30%;
+     margin-bottom: 10%;
+     float: right;
+ }
+ 
+ #form-right-column input
+ {
+    
+     border-radius: 0.1em;
+     margin-top: 9em;
+     width: 13em;
+     height: 1.5em;
+ }
+ 
  
  
  
