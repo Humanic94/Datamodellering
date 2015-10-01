@@ -46,13 +46,19 @@
        g.style.display = 'none';
        h.style.display = 'none';
        if(id == 'briksdalen-info')
+        
           document.getElementById('main-top').style.backgroundImage = "url('style/briksdalen.png')";
+        //  document.getElementById('briksdalen-marked').style.borderTop = "2px solid greenyellow";
+
        if(id == 'geiranger-info')
           document.getElementById('main-top').style.backgroundImage = "url('style/geiranger5.png')";
+     // document.getElementById('geiranger-marked').style.borderTop = "2px solid greenyellow";
        if(id == 'Aakneset-info')
           document.getElementById('main-top').style.backgroundImage = "url('style/bolgen.png')";
+        //  document.getElementById('Aakneset-marked').style.borderTop = "2px solid greenyellow";
        if(id == 'egendefinert-info')
           document.getElementById('main-top').style.backgroundImage = "url('style/geiranger.png')";
+     // document.getElementById('egendefinert-marked').style.borderTop = "2px solid greenyellow";
   
              
          
