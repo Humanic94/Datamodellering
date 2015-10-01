@@ -49,10 +49,12 @@ body h3
 
 header
 {
-    height: 20%;
+    max-height: 20%;
     width:100%;
     float:left;
     background: black;
+    margin:0;
+    overflow:hidden;
 }
 
 #left-top
@@ -74,7 +76,7 @@ header
 #right-top
 {
     float:right;
-    padding-right: 1em;
+    padding-right: 4em;
 }
 
 
@@ -177,7 +179,7 @@ main
 {
     width:100%;
     height: 100%;
-    
+    overflow: hidden;
 }
 
 
@@ -185,10 +187,11 @@ main
 {
     margin:0;
     float:left;
-    padding-left:9.9%;
+    padding-left:10%;
     padding-right: 9.9%;
     height: 100%;
     border-right: 1px solid white;
+    
  
 }
 
@@ -208,11 +211,12 @@ main
     position: fixed;
     right:0;
     top:0;
-    background-color: #1A1A1A;
+    background-color: black;
     width: 0;
     color: white;
-    height: 100%;
+    height: 82%;
     z-index: 3;
+    margin-top: 4.4%;
     -webkit-transition: width 1s, height 0s; /* Safari */
     transition: width 0.2s, height 0s;
 
@@ -221,7 +225,7 @@ main
 
  #navigation:target
  {
-     width: 10%;
+     width: 15%;
  }
 
  #navigation ul
@@ -271,9 +275,7 @@ main
 
  #closenav
  {
-     margin-left: 4em;
-     box-shadow: none;
-     margin-top: 0.8em;
+     display:block;
  }
 
  #navbutton
@@ -364,6 +366,26 @@ main
      height: 1.5em;
  }
  
+ 
+ #geiranger-info
+ {
+     display:none;
+ }
+ 
+ #briksdalen-info
+ {
+     display:block;
+ }
+ 
+ #Aakneset-info
+ {
+     display:none;
+ }
+ 
+ #egendefinert-info
+ {
+     display: none;
+ }
  
  
  

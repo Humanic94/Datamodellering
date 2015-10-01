@@ -33,4 +33,15 @@
        var e = document.getElementById('overlay'); 
        e.style.display = 'none';
        
-    }     
+    }
+    
+    function toggle_visibilityQuad(id,id2,id3,id4) {
+       var e = document.getElementById(id);
+       var f = document.getElementById(id2);
+       var g = document.getElementById(id3);
+       var h = document.getElementById(id4);
+       e.style.display = 'block';
+       f.style.display = 'none';
+       g.style.display = 'none';
+       h.style.display = 'none';
+  }   
