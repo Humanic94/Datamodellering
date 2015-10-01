@@ -369,12 +369,12 @@ main
  
  #geiranger-info
  {
-     display:none;
+     display:block;
  }
  
  #briksdalen-info
  {
-     display:block;
+     display:none;
  }
  
  #Aakneset-info
