@@ -174,7 +174,33 @@ main
   z-index: 2;
   background-color: rgba(255, 255, 255, 0.64); /*dim the background*/
  }
+ 
+ #booking-knapp{
+  display:block;
+  background-color: greenyellow;
+  position: absolute;
+  top: 37em;
+  left: 43.5%;
+  width: 12%;
+  height: 15%;
+  z-index: 10;
+  border-radius: 0.5em;
+}
 
+#booking-knapp a{
+    display: block;
+}
+
+ #booking-knapp p
+ {
+     font-size: 1.8em;
+     margin-top: 1.5em;
+     margin-left: 2em;
+     margin-right: 3em;
+     text-align: center;
+ }
+ 
+ 
 #main-top-booking img
 {
   
